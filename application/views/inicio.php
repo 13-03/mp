@@ -51,13 +51,13 @@ require('includes/header.php')?>
 	<!-- Catalogo  -->
 	<div class="container">
 		<div class="row">
-			<form action="<?php echo site_url('comprar/index')?>" method="post">
+			<form action="<?php echo base_url('index.php/comprar/')?>" method="post">
 				<input type="hidden" name="articulo" value="camara">
 				<div class="col"><img src="<?= base_url('public/IMG/image1.jpg')?>" class="rounded float-left">
 					<div class="boton1"><button type="submit" class="btn btn-outline-dark">Comprar</button></div>
 				</div>
 			</form>
-			<form action="<?php echo site_url('comprar/index')?>" method="post">
+			<form action="<?php echo base_url('index.php/comprar/')?>" method="post">
 				<input type="hidden" name="articulo" value="focos">
 				<div class="col"><img src="<?= base_url('public/IMG/image2.jpg')?>" class="rounded float-left">
 					<div class="boton2"><button type="submit" class="btn btn-outline-dark">Comprar</button></div>
@@ -65,13 +65,13 @@ require('includes/header.php')?>
 			</form>
 			
 			<div class="w-100"> </div>
-			<form action="<?php echo site_url('comprar/index')?>" method="post">
+			<form action="<?php echo base_url('index.php/comprar/')?>" method="post">
 				<input type="hidden" name="articulo" value="bicicleta">
 				<div class="col"><img src="<?= base_url('public/IMG/image3.jpg')?>" class="rounded float-left">
 					<div class="boton3"><button type="submit" class="btn btn-outline-dark">Comprar</button></div>
 				</div>
 			</form>
-			<form action="<?php echo site_url('comprar/index')?>" method="post">
+			<form action="<?php echo base_url('index.php/comprar/')?>" method="post">
 				<input type="hidden" name="articulo" value="chamarra">
 				<div class="col"><img src="<?= base_url('public/IMG/image4.png')?>" class="rounded float-left">
 					<div class="boton4"><button type="submit" class="btn btn-outline-dark">Comprar</button></div>
