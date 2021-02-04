@@ -10,7 +10,8 @@
 <!-- Venta de articulos -->
 <section id="pendiente" class=" text-center">
 	<h2>Pago pendiente</h2>
-    <a href="<?php echo base_url("index.php/inicio")?>">
+	<p>Para terminar revise su correo <?php echo $external_reference; ?></p>
+    <a href="<?php echo site_url('inicio/index')?>">
 				  <button type="button" class="btn btn-primary btn-lg">seguir comprando</button>
 				</a>
 </section>

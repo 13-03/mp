@@ -18,11 +18,11 @@
 			<div class="col">
 				<p class="text-justify">Detalle de tu compra:</p>
 				<ul class="text-justify">
-					<li> ID: <?php echo $payment_method_id ?></li>
-					<li> Referencia externa:<?php echo $external_reference ?> </li>
-					<li> ID de pago: <?php echo $payment_id ?></li>
+					<li> ID: <?php echo $payment_method_id;?></li>
+					<li> Referencia externa:<?php echo $external_reference;?></li>
+					<li> ID de pago: <?php echo $payment_id;?></li>
                     </ul>
-                    <a href="<?php echo base_url("index.php/inicio")?>">
+                   <a href="<?php echo site_url('inicio/index')?>">
 				  <button type="button" class="btn btn-primary btn-lg">seguir comprando</button>
 				</a>
 			</div>

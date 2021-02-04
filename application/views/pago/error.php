@@ -10,7 +10,7 @@
 <!-- Venta de articulos -->
 <section id="error" class=" text-center">
 	<h2>Error al procesar el pago</h2>
-    <a href="<?php echo base_url("index.php/inicio")?>">
+   <a href="<?php echo site_url('inicio/index')?>">
 				  <button type="button" class="btn btn-primary btn-lg">seguir comprando</button>
 				</a>
 </section>
