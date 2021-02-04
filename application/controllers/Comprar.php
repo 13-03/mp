@@ -78,6 +78,7 @@ class Comprar extends CI_Controller {
         $preference -> external_reference = $personal_e_reference;
         $preference -> auto_return ='approved';
         $preference -> notification_url ='https://hookb.in/qBggmZE0WlSzVVJyWkNb';
+        
 
          $preference ->payment_methods = array(
              "excluded_payment_methods" => array (
