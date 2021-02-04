@@ -42,11 +42,11 @@ class Comprar extends CI_Controller {
         $item = new MercadoPago\Item();
         $item->title = $_POST['articulo'];
         $item->id = 1234;
-        $item->picture_url = base_url('public/IMG/gri.png');  // http://vintage_joca.herokuapp.com/public/IMG/bi.png
+        $item->picture_url = base_url('public/IMG/cam.jpg');  // http://vintage_joca.herokuapp.com/public/IMG/bi.png
         $item->description = 'Dispositivo móvil de Tienda e-commerce';
         $item->category_id = "others";
         $item->quantity = 1;
-        $item->currancy_id = "MNX";
+        $item->currancy_id = 'MNX';
         $item->unit_price = 1000;
 
         $preference->items = array($item);
@@ -65,9 +65,9 @@ class Comprar extends CI_Controller {
         );
 
         $payer->address = array(
-            "street_name" => "Insurgentes Sur",
-            "street_number" => '1602',
-            "zip_code" => "03940" 
+            'street_name' => "Insurgentes Sur",
+            'street_number' => '1602',
+            'zip_code' => '03940' 
         );
         $preference -> payer =$payer;
 
@@ -80,14 +80,14 @@ class Comprar extends CI_Controller {
         
 
          $preference ->payment_methods = array(
-             "excluded_payment_methods" => array (
-                    array("id" => "amex")
+             'excluded_payment_methods' => array (
+                    array('id' => 'amex')
              ),
-             "excluded_payment_types" => array(
-                    array("id" => "atm")
+             'excluded_payment_types' => array(
+                    array('id' => 'atm')
              ),
              //cuotas
-             "installments" => 6
+             'installments' => 6
          );
 
         
