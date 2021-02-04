@@ -14,9 +14,6 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
 
-<script>
-  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-  
-</script>
+
 
 </html>
