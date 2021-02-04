@@ -111,10 +111,10 @@ class Comprar extends CI_Controller {
         
 
           $dataToView = array(
-            'preference' => $preference,
-            'payer_info' => $preference ->payer,
-            'phone_info' =>$phone_info,
-            'items' => $preference->items
+            "preference" => $preference,
+            "payer_info" => $preference ->payer,
+            "phone_info" =>$phone_info,
+            "items" => $preference->items
         );
 
 
