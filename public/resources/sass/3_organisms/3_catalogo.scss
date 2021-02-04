@@ -1,0 +1,50 @@
+#Catalogo {
+	background-color: white;
+	justify-content: center;
+	position: inherit;
+	width: 100%;
+	height: 650px;
+
+	h2 {
+		font-family: SimSun-ExtB;
+		font-size: 400%;
+		font-weight: 700;
+		position: relative;
+		top: calc(100% - 611px);
+	}
+
+	img {
+		margin-top: 60px;
+		padding: 0px;
+		margin: 20px;
+		display: block;
+		padding-left: 200px;
+
+	}
+
+	.boton1 {
+		position: relative;
+		top: calc(100% - 28px);
+		right: -100px;
+
+	}
+
+	.boton2 {
+		position: relative;
+		top: calc(100% - 28px);
+		right: -100px;
+	}
+
+	.boton3 {
+		position: relative;
+		top: calc(100% - 28px);
+		right: -100px;
+	}
+
+	.boton4 {
+		position: relative;
+		top: calc(100% - 28px);
+		right: -100px;
+	}
+
+}

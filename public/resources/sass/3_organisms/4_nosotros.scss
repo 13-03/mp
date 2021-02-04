@@ -1,0 +1,43 @@
+#Nosotros {
+	background-color: #D8BA94;
+	justify-content: center;
+	position: inherit;
+	width: 100%;
+	height: 650px;
+
+	.box {
+		background: #ffffff;
+		color: black;
+		padding: 2em;
+		border-radius: 15px;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		opacity: .5;
+		position: relative;
+		top: calc(100% - 550px);
+
+		.box> :last-child {
+			margin-bottom: 80em;
+
+			.box.style2 {
+				padding: 3.5em 2.5em 3.5em 2.5em;
+			}
+		}
+	}
+
+	h2 {
+		font-family: SimSun-ExtB;
+		font-size: 400%;
+		font-weight: 700;
+		position: relative;
+		top: calc(100% - 600px);
+	}
+
+	p {
+		font-family: SimSun-ExtB;
+		font-size: 150%;
+	}
+
+
+}
