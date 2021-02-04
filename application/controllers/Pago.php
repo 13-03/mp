@@ -5,7 +5,7 @@ class Pago extends CI_Controller {
 
      public function mppays ($payStatus){
 
-        MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN);
+       // MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN);
 		
 		switch ($payStatus){
 			case 'error':
