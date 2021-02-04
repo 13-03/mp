@@ -1,4 +1,6 @@
-<?php require('includes/header.php')?>
+
+<?php  defined('BASEPATH') OR exit('No direct script access allowed');
+require('includes/header.php')?>
 
 <nav id="navbar" class="sticky-top">
 	<ul class="nav justify-content-end">

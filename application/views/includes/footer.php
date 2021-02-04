@@ -1,3 +1,4 @@
+   
    </div>
 
     </div>
@@ -17,6 +18,5 @@
   src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
   
 </script>
-<script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
 
 </html>
