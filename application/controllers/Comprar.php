@@ -34,7 +34,7 @@ class Comprar extends CI_Controller {
        
         }
         // Agrega credenciales
-        $token = MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN); 
+        MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN); 
         MercadoPago\SDK::SetIntegratorId(INTEGRATOR_ID);
         // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
@@ -60,24 +60,29 @@ class Comprar extends CI_Controller {
         $payer->date_created = "2021-01-02T12:58:41.425-04:00";
         $payer-> email ="test_user_81131286@testuser.com";
         $payer-> phone =  array(
-            "area_code" => 52,
+            "area_code" => '52',
             "number" => '5549737300'
         );
 
-        $payerAddress = new stdClass();
-            $payerAddress-> street_name ='Insurgentes Sur';
-            $payerAddress -> street_number = '1602';
-            $payerAddress -> zip_code = '03940';
+       // $payerAddress = new stdClass();
+         //   $payerAddress-> street_name ='Insurgentes Sur';
+          //  $payerAddress -> street_number = '1602';
+           // $payerAddress -> zip_code = '03940';
         
-        $payer -> address =$payerAddress;
-
+       // $payer -> address =$payerAddress;
+        $payer->address = array(
+            "street_name" => "Insurgentes Sur",
+            "street_number" => '1602',
+            "zip_code" => "03940" 
+        );
         $preference -> payer =$payer;
 
         //numero de orden del pedido
         $personal_e_reference = 'naama230695@gmail.com';
         $preference -> external_reference = $personal_e_reference;
         $preference -> auto_return ='approved';
-        $preference -> notification_url ='https://hookb.in/qBggmZE0WlSzVVJyWkNb';
+        $preference -> notification_url ='https://tiendavintage.herokuapp.com/index.php/apimp/notification';
+       // $preference -> notification_url ='https://hookb.in/qBggmZE0WlSzVVJyWkNb';
         
 
          $preference ->payment_methods = array(
@@ -96,10 +101,10 @@ class Comprar extends CI_Controller {
         $itemString = implode ( '.', (array) $item);
 
         $urls =array(
-            'failure' => base_url("pago/mppays?url=error&item_data=". $itemString),
+            "failure" => base_url("pago/mppays?url=error&item_data=". $itemString),
             // vintage.com/index.php/pago/error?url=error&item_data=item.value.item.value
-            'pending' => base_url("pago/mppays?url=pendiente&item_id=". $item->id),
-            'success' => base_url("pago/mppays?url=exitoso&item_id=". $item->id)
+            "pending" => base_url("pago/mppays?url=pendiente&item_id=". $item->id),
+            "success" => base_url("pago/mppays?url=exitoso&item_id=". $item->id)
 
         );
         
@@ -111,7 +116,7 @@ class Comprar extends CI_Controller {
 
           $dataToView = array(
             'preference' => $preference,
-            'payer_info' => $preference -> payer,
+            'payer_info' => $preference ->payer,
             'phone_info' =>$phone_info,
             'items' => $preference->items
         );
