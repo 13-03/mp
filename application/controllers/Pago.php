@@ -5,7 +5,7 @@ class Pago extends CI_Controller {
 
      public function mppays ($payStatus){
 
-       // MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN);
+       MercadoPago\SDK::setAccessToken(MERCADOPAGO_TOKEN);
 		
 		switch ($payStatus){
 			case 'error':
@@ -33,13 +33,13 @@ class Pago extends CI_Controller {
 
 				$payment = MercadoPago\Payment::get($paymentId);
 
-			//	$dataToView = array(
-			//		'payment_status' => $payment->status,
-			//		'payment_status_detail' => $payment->status_detail,
-			//		'payment_id' => $payment->id,
-			//		'payment_method_id' => $payment->payment_method_id,
-			//		'external_reference' => $externalRef
-			//	);
+				$dataToView = array(
+					'payment_status' => $payment->status,
+					'payment_status_detail' => $payment->status_detail,
+					'payment_id' => $payment->id,
+					'payment_method_id' => $payment->payment_method_id,
+					'external_reference' => $externalRef
+				);
 
 				$this->load->view('pago/exitoso', $dataToView);
 				break;
