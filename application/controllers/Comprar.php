@@ -92,7 +92,7 @@ class Comprar extends CI_Controller {
 
         
 
-        $itemString = implode ( '.', (array) $item);
+        $itemString = implode ( ',', (array) $item);
 
         $urls =array(
             "failure" => site_url('pago/mppays/error?item_data='. $itemString),
@@ -111,10 +111,10 @@ class Comprar extends CI_Controller {
         
 
           $dataToView = array(
-            "preference" => $preference,
-            "payer_info" => $preference ->payer,
-            "phone_info" =>$phone_info,
-            "items" => $preference->items
+            'preference' => $preference,
+            'payer_info' => $preference ->payer,
+            'phone_info' =>$phone_info,
+            'items' => $preference->items
         );
 
 
