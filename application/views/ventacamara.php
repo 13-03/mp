@@ -25,8 +25,8 @@
 					<li>Precio: $1,000.00</li>
                     </ul>
                    <label for="quantity"><h5>Cantidad</h5></label>
-                    <input type="number" id="quantity" value="1" class="form-control">
-                    <a href="<?php echo $preference->sandbox_init_point?>">
+					<input type="number" id="quantity" value="1" class="form-control">
+                    <a data-preferenceId="<?php echo $preference->id; ?>" href="<?php echo $preference->sandbox_init_point?>">
 				  <button type="button" class="btn btn-primary btn-lg">Pagar</button>
 			   </a>
 			</div>
