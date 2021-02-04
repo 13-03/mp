@@ -95,10 +95,10 @@ class Comprar extends CI_Controller {
         $itemString = implode ( ',', (array) $item);
 
         $urls =array(
-            "failure" => site_url('pago/mppays/error?item_data='. $itemString),
+            "failure" => base_url('pago/mppays/error?item_data='. $itemString),
             // vintage.com/index.php/pago/error?url=error&item_data=item.value.item.value
-            "pending" => site_url('pago/mppays/pending?item_id='. $item->id),
-            "success" => site_url('pago/mppays/success?item_id='. $item->id)
+            "pending" => base_url('pago/mppays/pending?item_id='. $item->id),
+            "success" => base_url('pago/mppays/success?item_id='. $item->id)
 
         );
         
