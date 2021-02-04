@@ -64,12 +64,6 @@ class Comprar extends CI_Controller {
             "number" => '5549737300'
         );
 
-       // $payerAddress = new stdClass();
-         //   $payerAddress-> street_name ='Insurgentes Sur';
-          //  $payerAddress -> street_number = '1602';
-           // $payerAddress -> zip_code = '03940';
-        
-       // $payer -> address =$payerAddress;
         $payer->address = array(
             "street_name" => "Insurgentes Sur",
             "street_number" => '1602',
@@ -101,10 +95,10 @@ class Comprar extends CI_Controller {
         $itemString = implode ( '.', (array) $item);
 
         $urls =array(
-            "failure" => base_url('pago/mppays?url=error&item_data='. $itemString),
+            "failure" => site_url('pago/mppays?url=error&item_data='. $itemString),
             // vintage.com/index.php/pago/error?url=error&item_data=item.value.item.value
-            "pending" => base_url('pago/mppays?url=pendiente&item_id='. $item->id),
-            "success" => base_url('pago/mppays?url=exitoso&item_id='. $item->id)
+            "pending" => site_url('pago/mppays?url=pendiente&item_id='. $item->id),
+            "success" => site_url('pago/mppays?url=exitoso&item_id='. $item->id)
 
         );
         
