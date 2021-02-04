@@ -51,7 +51,7 @@ require('includes/header.php')?>
 	<!-- Catalogo  -->
 	<div class="container">
 		<div class="row">
-			<form action="<?= site_url('index.php/comprar')?>" method="post">
+			<form action="<?php echo site_url('comprar/index')?>" method="post">
 				<input type="hidden" name="articulo" value="camara">
 				<div class="col"><img src="<?= base_url('public/IMG/image1.jpg')?>" class="rounded float-left">
 					<div class="boton1"><button type="submit" class="btn btn-outline-dark">Comprar</button></div>
