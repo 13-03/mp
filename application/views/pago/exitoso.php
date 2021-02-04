@@ -1,4 +1,4 @@
-<?php include( realpath( __DIR__ . '/../includes/header.php') ) ?>
+<?php require('/pago/includes/header.php')?>
 
 <nav id="navbar" class="sticky-top">
 	<ul class="nav justify-content-end">
@@ -18,9 +18,9 @@
 			<div class="col">
 				<p class="text-justify">Detalle de tu compra:</p>
 				<ul class="text-justify">
-					<li> ID: <?php echo $payment_method_id; ?></li>
-					<li> Referencia externa:<?php echo $external_reference; ?> </li>
-					<li> ID de pago: <?php echo $payment_id; ?></li>
+					<li> ID: <?php echo $payment_method_id ?></li>
+					<li> Referencia externa:<?php echo $external_reference ?> </li>
+					<li> ID de pago: <?php echo $payment_id ?></li>
                     </ul>
                     <a href="<?php echo base_url("index.php/inicio")?>">
 				  <button type="button" class="btn btn-primary btn-lg">seguir comprando</button>
@@ -29,4 +29,4 @@
 		</div>
         </section>
      
-<?php include( realpath(__DIR__ . '/../includes/footer.php')) ?>
+<?php require('pago/includes/footer.php')?>

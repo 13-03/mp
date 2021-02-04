@@ -1,4 +1,4 @@
-<?php include( realpath( __DIR__ . '/../includes/header.php') ) ?>
+<?php require('/pago/includes/header.php')?>
 
 <nav id="navbar" class="sticky-top">
 	<ul class="nav justify-content-end">
@@ -15,4 +15,4 @@
 				</a>
 </section>
 
-<?php include( realpath(__DIR__ . '/../includes/footer.php')) ?>
+<?php require('/pago/includes/header.php')?>
